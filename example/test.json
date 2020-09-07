@@ -1,0 +1,17 @@
+{
+  "page_title": "My Awesome Website",
+  "mega_list": [
+    {
+      "list_name": "My favorite colors",
+      "list_items": [ "Red", "Green", "Pink", "Blue" ]
+    },
+    {
+      "list_name": "My favorite foods",
+      "list_items": [ "Pasta", "Salad", "Kimchi", "Water (not actually food)" ]
+    }
+  ],
+  "me": {
+    "name": "Will",
+    "age": 100
+  }
+}
