@@ -12,6 +12,10 @@ def arg_error(message):
   msg = "\n" +"    "+"Error\n" +"    "+message+"\n"+"\n"+"    USAGE:\n    python3 tempyl.py template_file data_file output_file\n"
   sys.exit(msg)
 
+def other_error(message):
+  msg = "\n" +"    "+"Error\n" +"    "+message+"\n"
+  sys.exit(msg)
+
 def entemplate(lines, data):
   out = []
   for line in lines:
@@ -114,7 +118,10 @@ except:
 
 try:
   with open(data_fname, 'r') as f:
-    json_data = json.load(f)
+    try:
+      json_data = json.load(f)
+    except:
+      other_error("Could not parse JSON for file:"+data_fname)
 except:
   arg_error("Could not load file: "+data_fname)
 
