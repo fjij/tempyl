@@ -3,6 +3,13 @@
 Tempyl is a super simple python-based templating tool. It's super easy to use
 with LaTeX and HTML, but can be used for whatever you want.
 
+## Usage
+
+Download `tempyl.py` and run it as follows:
+```bash
+python3 tempyl.py template_file data_file output_file
+```
+
 ## Features
 
 ### Replacing identifiers
@@ -80,12 +87,6 @@ Iterate over JSON lists and reuse part of a template.
 <p>Not thing A</p>
 ```
 
-## Usage
-
-```bash
-python3 tempyl template_file data_file output_file
-```
-
 ## Extra Features
 
 ### List properties, `self` identifier
@@ -103,7 +104,7 @@ rendered.
 ```json
 {
   "items.begin": "",
-  "items.separator": ", "
+  "items.separator": ", ",
   "items.end": ".",
   "items": ["a", "b", "c"]
 }
